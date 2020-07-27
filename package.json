@@ -1,0 +1,44 @@
+{
+  "name": "react-topic-voting-app",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.10.1",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.55",
+    "axios": "^0.19.2",
+    "moment": "^2.26.0",
+    "react": "^16.13.1",
+    "react-custom-scrollbars": "^4.2.1",
+    "react-dom": "^16.13.1",
+    "react-hammerjs": "^1.0.1",
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts-with-ssr": "0.6.0",
+    "react-share": "^4.2.1",
+    "react-slick": "^0.25.2",
+    "react-stack-grid": "^0.7.1",
+    "react-swipeable-views": "^0.13.9",
+    "redux": "^4.0.4",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0",
+    "serialize-javascript": "^2.1.2",
+    "slick-carousel": "^1.8.1"
+  },
+  "scripts": {
+    "start": "react-scripts-with-ssr start",
+    "build": "react-scripts-with-ssr build",
+    "test": "react-scripts-with-ssr test",
+    "eject": "react-scripts-with-ssr eject",
+    "serve": "set PORT=3001 && react-scripts-with-ssr serve"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

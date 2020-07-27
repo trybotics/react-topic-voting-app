@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <base href="%PUBLIC_URL%/" />
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <link rel="icon" href="%PUBLIC_URL%/logo.ico" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.jpg" />
+  <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/logo.ico" or "logo.ico", "%PUBLIC_URL%/logo.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="description" content="%DESCRIPTION%" />
+  <meta name="keywords" content="%KEYWORDS%" />
+  <meta name="author" content="Trybotics" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#2196f3" />
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#2196f3" />
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#2196f3" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="%TITLE%" />
+  <meta property="og:type" content="%TYPE%" />
+  <meta property="og:url" content="%URL%" />
+  <meta property="og:site_name" content="Trybotics" />
+  <meta property="og:description" content="%DESCRIPTION%" />
+  <!-- <meta property='og:image:secure_url' content='' /> -->
+  <meta property="og:image" content="%IMAGE%" />
+  <meta property="og:image:width" content="512" />
+  <meta property="og:image:height" content="512" />
+  <!-- SE Bots -->
+  <meta name="googlebot" content="all,index,follow" />
+  <meta name="robots" content="all,index,follow" />
+  <meta name="msnbot" content="all,index,follow" />
+  <meta name="google-site-verification" content="FDnU_d9Dabdv-NZgPfdVMeO1jMgeO-1AaAWFrBnomtY" />
+  <title id="title">%TITLE% | Trybotics</title>
+  <link rel="shortcut icon" href="%PUBLIC_URL%/logo.ico" />
+  <link rel="canonical" href="%URL%" />
+  <link rel="alternate" href="%URL%" hreflang="x-default" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+  <link rel="stylesheet" type="text/css" charset="UTF-8"
+    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
+  <link rel="preconnect" href="https://api.trybotics.com">
+  <link rel="preconnect" href="https://internshala.com" crossorigin>
+  <style>
+    .loader {
+      border: 5px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 5px solid #1a90ff;
+      width: 60px;
+      height: 60px;
+      -webkit-animation: spin 0.7s linear infinite;
+      /* Safari */
+      animation: spin 0.7s linear infinite;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-top: -35px;
+      margin-left: -35px;
+    }
+
+    /* Safari */
+    @-webkit-keyframes spin {
+      0% {
+        -webkit-transform: rotate(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(360deg);
+      }
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .slick-slide>div>div {
+      display: block !important;
+    }
+
+    .buttonOutline {
+      border-radius: unset !important;
+      border: 1px solid #999 !important;
+    }
+
+    .buttonOutline span {
+      color: #777 !important;
+    }
+
+    .buttonOutlineSelected {
+      border-radius: unset !important;
+      border: 1px solid #2196f3 !important;
+    }
+
+    .borderOnDesktop {
+      border-left: 2px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .borderOnMobile {
+      border-bottom: none;
+    }
+
+    .bottom-article {
+      display: none !important;
+    }
+
+    .buttons_container {
+      display: none !important;
+    }
+
+    .text-center .apply-button {
+      display: none !important;
+    }
+
+    #fb_like_container {
+      display: none;
+    }
+
+    .descriptionInTag img {
+      max-width: 100% !important;
+      height: auto !important;
+    }
+
+    .descriptionInTag iframe {
+      max-width: 100% !important;
+      height: auto !important;
+    }
+
+    .descriptionInTag section {
+      width: unset !important;
+      max-width: unset !important;
+    }
+
+    .descriptionInTag .photoset-image {
+      width: 100% !important;
+      height: auto !important;
+    }
+
+    .descriptionInTag .main-article-content img:first-child {
+      display: none;
+    }
+
+    h1,
+    .h1 .descriptionInTag {
+      font-size: 36px;
+    }
+
+    h2,
+    .h2 .descriptionInTag {
+      font-size: 30px;
+    }
+
+    h3,
+    .h3 .descriptionInTag {
+      font-size: 24px;
+    }
+
+    h4,
+    .h4 .descriptionInTag {
+      font-size: 18px;
+    }
+
+    h5,
+    .h5 .descriptionInTag {
+      font-size: 14px;
+    }
+
+    h6,
+    .h6 .descriptionInTag {
+      font-size: 12px;
+    }
+
+    .MuiPaper-elevation1 {
+      border: 1px solid #e4ecfb !important;
+      background: #fff !important;
+      border-radius: 10px !important;
+      box-shadow: 0 10px 20px #dfe2eb !important;
+      transition: all .5s ease !important;
+    }
+
+    .MuiButton-contained {
+      border-radius: 8px !important;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, .2) !important;
+    }
+
+    .homeSearchInput {
+      border: unset !important;
+      border-radius: 4px !important;
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 5px -3px, rgba(0, 0, 0, 0.14) 0px 8px 10px 1px, rgba(0, 0, 0, 0.12) 0px 3px 14px 2px !important;
+      transition: unset !important;
+    }
+
+    .homeSearchInput button {
+      border-radius: 0px 4px 4px 0px !important;
+    }
+
+    .MuiPaper-elevation8 {
+      border-radius: 8px !important;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, .2) !important;
+    }
+
+    .MuiPaper-elevation24 {
+      border-radius: 8px !important;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, .2) !important;
+    }
+
+    @media only screen and (max-width: 780px) {}
+
+    @media only screen and (max-width: 480px) {
+      .borderOnDesktop {
+        padding-left: 0px;
+        border-left: none;
+      }
+
+      .borderOnMobile {
+        border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+      }
+
+      .costom-margin-left i {
+        margin-left: 0rem !important;
+      }
+
+      .descriptionInTag img {
+        width: 100% !important;
+        height: auto !important;
+      }
+
+      .descriptionInTag iframe {
+        width: 100% !important;
+        height: auto !important;
+      }
+
+      .descriptionInTag pre {
+        width: 305px !important;
+        overflow: scroll !important;
+      }
+    }
+  </style>
+  <style id="jss-server-side">
+    %CSS% .stackGrid>span {
+      opacity: 1 !important;
+      width: 30% !important;
+      position: unset !important;
+      float: left !important;
+      padding: 1.6% !important;
+    }
+
+    @media only screen and (max-width: 480px) {
+      .stackGrid>span {
+        width: 95% !important;
+        padding: 2.5% !important;
+      }
+    }
+  </style>
+  <script>
+    clientEnv = { FOO: "bar" };
+  </script>
+  <script type="application/ld+json">
+    %JSONLD%
+  </script>
+</head>
+
+<body style="margin: 0px; font-family: 'Roboto', sans-serif; background-color: #f5f8fa !important;">
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+  <!-- Google Analytics Script -->
+  <script type="text/javascript">
+    (function (i, s, o, g, r, a, m) {
+      i["GoogleAnalyticsObject"] = r;
+      (i[r] =
+        i[r] ||
+        function () {
+          (i[r].q = i[r].q || []).push(arguments);
+        }),
+        (i[r].l = 1 * new Date());
+      (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m);
+    })(
+      window,
+      document,
+      "script",
+      "https://www.google-analytics.com/analytics.js",
+      "ga"
+    );
+    ga("create", "UA-78643822-1", "auto");
+    ga("send", "pageview");
+  </script>
+  <!-- Google Translate Script -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        {
+          pageLanguage: "en",
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+          gaTrack: true,
+          gaId: "UA-78643822-1"
+        },
+        "google_translate_element"
+      );
+    }
+  </script>
+  <script type="text/javascript">
+    (function () {
+      var gtConstEvalStartTime = new Date();
+      /*Copyright The Closure Library Authors.
+      SPDX-License-Identifier: Apache-2.0*/
+      function d(b) { var a = document.getElementsByTagName("head")[0]; a || (a = document.body.parentNode.appendChild(document.createElement("head"))); a.appendChild(b) } function _loadJs(b) { var a = document.createElement("script"); a.type = "text/javascript"; a.charset = "UTF-8"; a.src = b; d(a) } function _loadCss(b) { var a = document.createElement("link"); a.type = "text/css"; a.rel = "stylesheet"; a.charset = "UTF-8"; a.href = b; d(a) } function _isNS(b) { b = b.split("."); for (var a = window, c = 0; c < b.length; ++c)if (!(a = a[b[c]])) return !1; return !0 }
+      function _setupNS(b) { b = b.split("."); for (var a = window, c = 0; c < b.length; ++c)a.hasOwnProperty ? a.hasOwnProperty(b[c]) ? a = a[b[c]] : a = a[b[c]] = {} : a = a[b[c]] || (a[b[c]] = {}); return a } window.addEventListener && "undefined" == typeof document.readyState && window.addEventListener("DOMContentLoaded", function () { document.readyState = "complete" }, !1);
+      if (_isNS('google.translate.Element')) { return } (function () { var c = _setupNS('google.translate._const'); c._cest = gtConstEvalStartTime; gtConstEvalStartTime = undefined; c._cl = 'en'; c._cuc = 'googleTranslateElementInit'; c._cac = ''; c._cam = ''; c._ctkk = '440610.1495664529'; var h = 'translate.googleapis.com'; var s = (true ? 'https' : window.location.protocol == 'https:' ? 'https' : 'http') + '://'; var b = s + h; c._pah = h; c._pas = s; c._pbi = b + '/translate_static/img/te_bk.gif'; c._pci = b + '/translate_static/img/te_ctrl3.gif'; c._pli = b + '/translate_static/img/loading.gif'; c._plla = h + '/translate_a/l'; c._pmi = b + '/translate_static/img/mini_google.png'; c._ps = b + '/translate_static/css/translateelement.css'; c._puh = 'translate.google.com'; _loadCss(c._ps); _loadJs(b + '/translate_static/js/element/main.js'); })();
+    })();
+  </script>
+  <style>
+    .goog-te-banner-frame.skiptranslate {
+      display: none !important;
+    }
+
+    body {
+      top: 0px !important;
+    }
+
+    .goog-te-menu-frame {
+      max-width: 100% !important;
+    }
+
+    .goog-te-menu2 {
+      max-width: 100% !important;
+      overflow-x: scroll !important;
+      box-sizing: border-box !important;
+      height: auto !important;
+    }
+
+    .goog-te-gadget-simple img {
+      position: absolute !important;
+      display: none !important;
+    }
+
+    .skiptranslate iframe {
+      display: none !important;
+    }
+
+    .goog-te-gadget-simple {
+      background-color: #2196f3 !important;
+      border-left: 2px solid #ffffff !important;
+      border-top: 2px solid #ffffff !important;
+      border-bottom: 2px solid #ffffff !important;
+      border-right: 2px solid #ffffff !important;
+      padding: 4px !important;
+      border-radius: 5px !important;
+    }
+
+    .goog-te-gadget-simple span {
+      color: #ffffff !important;
+    }
+
+    .goog-te-gadget-simple span :nth-of-type(2) {
+      border-left: 2px solid #2196f3 !important;
+    }
+  </style>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      //Google translater will not translate the icon with class name as material-icons
+      $(".material-icons").addClass("notranslate");
+      $("body").on("DOMSubtreeModified", function (e) {
+        if ($(e.target).find(".material-icons").length > 0) {
+          $(".material-icons").addClass("notranslate");
+        }
+      });
+      new google.translate.TranslateElement(
+        {
+          pageLanguage: "en",
+          autoDisplay: false,
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        },
+        "google_translate_element"
+      );
+      function changeGoogleStyles() {
+        if (
+          $(".goog-te-menu-frame")
+            .contents()
+            .find(".goog-te-menu2").length
+        ) {
+          $(".goog-te-menu-frame")
+            .contents()
+            .find(".goog-te-menu2")
+            .css({
+              "max-width": "100%",
+              "overflow-x": "auto",
+              "box-sizing": "border-box",
+              height: "auto"
+            });
+        } else {
+          setTimeout(changeGoogleStyles, 50);
+        }
+      }
+      changeGoogleStyles();
+    }
+  </script>
+
+  <!-- Android Mandatory Release Code -->
+  <script>
+    var isAndroidBuild = false;
+    var appVersion = "2.0.0"
+
+    if (isAndroidBuild) {
+      var xhttp;
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          var response = JSON.parse(this.responseText)
+          console.log(response, response.version, response.isMandatory);
+          if ((Number(appVersion.replace(/\./g,'')) < Number(response.version.replace(/\./g,''))) && response.isMandatory) {
+            alert("This is mandatory release please update your app.")
+            window.open('https://play.google.com/store/apps/details?id=com.trybotics.app')
+          }
+        }
+      }
+      xhttp.open("GET", "https://api.trybotics.com/api/androidVersion", true);
+      xhttp.send();
+    }
+
+  </script>
+  <!-- <div id="root">%ROOT%</div> -->
+  <div id="root">
+    <div class="loader"></div>
+  </div>
+  <!-- Import jQuery before materialize.js -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script>
+    window.__INITIAL_STATE__ = % __INITIAL_STATE__ %;
+  </script>
+</body>
+
+</html>
