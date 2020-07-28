@@ -5,7 +5,7 @@ Demo User Email: user@gmail.com
 Demo User Password: user@gmail.com 
 
 Steps to Install:
-1. git clone
+1. git clone https://github.com/trybotics/react-topic-voting-app.git
 2. npm install
 3. node server.js  (Backend will run on port http://localhost:8080/)  
 4. npm start  (UI will run on port http://localhost:3000/)
