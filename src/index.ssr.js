@@ -43,7 +43,7 @@ let pages = {
     keywords: defaultKeywords,
     rootURL: rootURL
   },
-  ad: {
+  topic: {
     type: `website`,
     title: `Topic`,
     description: `Post online Topic for voting. Get topic voting result.`,
