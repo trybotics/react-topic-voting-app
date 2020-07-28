@@ -147,7 +147,7 @@ async function getPageInitialData(request, response) {
       return page
     } else if (urls.length >= 3 && ['topic'].includes(urls[1])) {
       let result = await axios.get(url)
-      let data = urls[1] == result.data[0]
+      let data = result.data[0]
       if (data) {
         if (data.id == urls[2]) {
           page.store[urls[1] + 'State'][urls[1] + 's'] = [data]
