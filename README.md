@@ -8,7 +8,9 @@ Steps to Install:
 1. git clone
 2. npm install
 3. node server.js  (Backend will run on port http://localhost:8080/)  
-4. npm start  (UI will run on port http://localhost:3000/)npm run build (For production)npm run serve (UI production mode with SSR)
+4. npm start  (UI will run on port http://localhost:3000/)
+5. npm run build (For production)
+6. npm run serve (UI production mode with SSR)
 
 
 #Technologies:
