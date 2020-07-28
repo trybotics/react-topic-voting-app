@@ -23,7 +23,13 @@
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
     "serialize-javascript": "^2.1.2",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "http": "0.0.0",
+    "mongoose": "^5.8.6",
+    "mongoose-auto-increment": "^5.0.1"
   },
   "scripts": {
     "start": "react-scripts-with-ssr start",

@@ -35,7 +35,7 @@ const styles = theme => ({
   formHeader: {
     textAlign: "center",
     fontSize: "20px",
-    backgroundColor: "#2196f3",
+    backgroundColor: "#009688",
     color: "#fff",
     padding: "15px 12px",
     textTransform: "uppercase"
@@ -49,7 +49,7 @@ const styles = theme => ({
   },
   buttonOutlineSelected: {
     borderRadius: "unset !important",
-    border: "1px solid  #2196f3 !important"
+    border: "1px solid  #009688 !important"
   },
   buttonOutlined: {
     borderRadius: "unset !important",
@@ -100,6 +100,9 @@ class TopicPost extends React.Component {
     this.state.error = [];
     if (!this.state.adTitle) {
       this.state.error["adTitle"] = "Required";
+    }
+    if (this.state.adTitle.length>255) {
+      this.state.error["adTitle"] = "More than 255 characters not allowed";
     }
     if (!this.state.adDescription) {
       this.state.error["adDescription"] = "Required";
@@ -185,6 +188,7 @@ class TopicPost extends React.Component {
               margin="normal"
               fullWidth
               autoFocus
+              maxlength="255"
             />
             <TextField
               id="adDescription"
@@ -200,6 +204,7 @@ class TopicPost extends React.Component {
               multiline
               rowsMax="10"
               type="text"
+              maxlength="255"
             />
             {this.state.showImageField && (
               <TextField
@@ -243,56 +248,6 @@ class TopicPost extends React.Component {
                 fullWidth
               />
             )}
-            <center style={{ marginTop: "20px" }}>
-              <Button
-                className={
-                  this.state.showImageField
-                    ? `${classes.buttonOutlineSelected}`
-                    : `${classes.buttonOutlined}`
-                }
-                onClick={() => {
-                  this.setState({ showImageField: !this.state.showImageField });
-                }}
-                variant="outlined"
-                color={this.state.showImageField ? "primary" : "default"}
-                style={{ color: "#777", fontWeight: "600" }}
-              >
-                Image &nbsp;&nbsp;
-                <ImageIcon />
-              </Button>
-              <Button
-                className={
-                  this.state.showVideoField
-                    ? `${classes.buttonOutlineSelected}`
-                    : `${classes.buttonOutlined}`
-                }
-                onClick={() => {
-                  this.setState({ showVideoField: !this.state.showVideoField });
-                }}
-                variant="outlined"
-                color={this.state.showVideoField ? "primary" : "default"}
-                style={{ color: "#777", fontWeight: "600" }}
-              >
-                Video &nbsp;&nbsp;
-                <PlayCircleFilledIcon />
-              </Button>
-              <Button
-                className={
-                  this.state.showLinkField
-                    ? `${classes.buttonOutlineSelected}`
-                    : `${classes.buttonOutlined}`
-                }
-                onClick={() => {
-                  this.setState({ showLinkField: !this.state.showLinkField });
-                }}
-                variant="outlined"
-                color={this.state.showLinkField ? "primary" : "default"}
-                style={{ color: "#777", fontWeight: "600" }}
-              >
-                Link &nbsp;&nbsp;
-                <LinkIcon />
-              </Button>
-            </center>
           </DialogContent>
           <Divider light style={{ marginTop: "10px" }} />
           <div style={{ paddingBottom: "40px", paddingTop: "5px" }}>

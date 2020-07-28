@@ -123,15 +123,15 @@ const styles = theme => ({
     margin: "6px !important"
   },
   blinking: {
-    color: '#2196F3',
+    color: '#009688',
     animation: `$blinkingText 1.2s infinite`
   },
   "@keyframes blinkingText": {
-    "0%": { color: '#2196F3' },
-    "49%": { color: '#2196F3' },
+    "0%": { color: '#009688' },
+    "49%": { color: '#009688' },
     "60%": { color: 'transparent' },
     "99%": { color: 'transparent' },
-    "100%": { color: '#2196F3' },
+    "100%": { color: '#009688' },
   },
   fab: {
     position: 'fixed',
@@ -256,7 +256,7 @@ class Header extends React.Component {
         this.props.location.pathname == "/home"
       ) {
         this.props.history.push({
-          pathname: "project",
+          pathname: "topic",
           search: "?search=" + this.state.search
         });
       } else {
@@ -319,7 +319,7 @@ class Header extends React.Component {
               }}
               style={{
                 background:
-                  'url("https://img.youtube.com/vi/DWHcA4PH5sc/mqdefault.jpg")',
+                  'url("https://ak.picdn.net/shutterstock/videos/31245328/thumb/1.jpg")',
                 position: "relative",
                 padding: "32px 32px 12px",
                 marginBottom: "8px"
@@ -485,7 +485,7 @@ class Header extends React.Component {
         className="flex"
         style={{ flex: 1 }}
       >
-        Topic Voting
+        Topic Vote
       </Typography>
 
       <Hidden xsDown>

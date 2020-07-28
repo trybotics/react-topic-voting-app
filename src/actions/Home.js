@@ -70,7 +70,7 @@ export const signup = data => {
 
 export const getNewTopics = skip => {
   return dispatch => {
-    return axios.get(apiRoot + "/api/topic?limit=24&skip=" + skip).then(
+    return axios.get(apiRoot + "/api/topic?isHome=1&limit=20&skip=" + skip).then(
       response => {
         if (response.data.length > 0) {
           dispatch(setNewTopics(response.data));

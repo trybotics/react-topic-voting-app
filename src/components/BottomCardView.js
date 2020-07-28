@@ -99,12 +99,12 @@ const styles = theme => ({
     color: "#1da1f2 !important"
   },
   blue: {
-    color: "#2196f3 !important"
+    color: "#009688 !important"
   },
   formHeader: {
     textAlign: "center",
     fontSize: "20px",
-    backgroundColor: "#2196f3",
+    backgroundColor: "#009688",
     color: "#fff",
     padding: "15px 12px",
     textTransform: "uppercase"

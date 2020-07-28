@@ -112,7 +112,7 @@ import {
   export const deleteTopic = id => {
     return dispatch => {
       return axios
-        .delete(apiRoot + "/apitopic/" + id, {
+        .delete(apiRoot + "/api/topic/" + id, {
           headers: {
             "Content-Type": "application/json",
             Authorization: "Basic " + localStorage.getItem("authToken")

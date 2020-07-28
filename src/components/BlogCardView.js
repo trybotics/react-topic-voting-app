@@ -435,11 +435,12 @@ class BlogCardView extends React.Component {
               )}
             </Typography>
           </CardContent>
+          {!this.props.noBottom&&
           <BottomCardView
             gridSet={this.props.gridSet}
             data={this.props.data}
             type={this.props.type}
-          />
+          />}
         </Card>
         {(this.props.type == "topic") ?
           <TopicPost

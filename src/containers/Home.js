@@ -13,6 +13,7 @@ import { getNewTopics } from '../actions/Home'
 import Container from "@material-ui/core/Container";
 import clsx from "clsx";
 import Slider from "react-slick";
+import TopicCardView from "../components/BlogCardView";
 
 
 function TabContainer({ children, dir }) {
@@ -33,7 +34,7 @@ const styles = theme => ({
       borderColor: '#80bdff',
       boxShadow: '0 0 0 0.2rem rgba(0,123,255,.25)',
       backgroundColor: '#FFF',
-      color: '#2196f3'
+      color: '#009688'
     }
   },
   pvMain: {
@@ -76,7 +77,7 @@ const styles = theme => ({
   formHeader: {
     textAlign: "center",
     fontSize: "20px",
-    backgroundColor: "#2196f3",
+    backgroundColor: "#009688",
     color: "#fff",
     padding: "15px 12px",
     textTransform: "uppercase"
@@ -153,14 +154,19 @@ class Home extends React.Component {
     this.setState({ showLoginModel: false, showContactUsModel: false, showProfile: false })
   }
 
+  gridSet = () => {
+    // if (this.grid) {
+    //   this.grid.updateLayout();
+    // }
+  };
+
   render() {
     const { classes } = this.props;
     let topicCard = []
     for (let i in this.props.newTopics) {
-      if (this.props.newTopics[i]) {
-        topicCard.push(
-          <Link style={{ all: 'initial' }} to={'topic/' + this.props.newTopics[i].id}>
-            <Card style={{ marginLeft: 10, marginRight: 10, marginTop: 20, marginBottom: 20 }}>
+      topicCard.push(
+        <Link style={{ all: 'initial' }} to={'topic/' + this.props.newTopics[i].id}>
+          {/* <Card style={{ marginLeft: 10, marginRight: 10, marginTop: 20, marginBottom: 20 }}>
               {this.props.newTopics[i].imageUrl &&
                 <img width="100%" height="160px" src={this.props.newTopics[i].imageUrl} alt={this.props.newTopics[i].title} />
               }
@@ -168,16 +174,24 @@ class Home extends React.Component {
               <Typography style={{ padding: "10px", fontSize: '15px', fontWeight: 'bold' }} align="center" variant="h6" noWrap>
                 {this.props.newTopics[i].title}
               </Typography>
-            </Card>
-          </Link>
-        )
-      }
+            </Card> */}
+          <div style={{ marginLeft: 10, marginRight: 10, marginTop: 20, marginBottom: 20 }}>
+            <TopicCardView
+              location={this.props.location}
+              gridSet={this.gridSet}
+              data={this.props.newTopics[i]}
+              type="topic"
+              noBottom={true}
+            />
+          </div>
+        </Link>
+      )
     }
 
     return (
       <Container disableGutters={true} maxWidth="lg" className={clsx(classes.pageSlideAnimation, classes.pageSlide)}>
         <Typography align="center" color='inherit' variant="h5">
-          RECENT TOPIC
+          TOP VOTED TOPICS
         </Typography>
         <Grid style={{ margin: 'auto', marginTop: '20px' }} className={clsx(classes.pageSlideAnimation, classes.pageSlide)} justify='center' container spacing={0}>
           <Grid justify='center' alignItems='center' item xs={12} sm={12}>
@@ -191,21 +205,21 @@ class Home extends React.Component {
                     lazyLoad={true}
                     infinite={true}
                     speed={1500}
-                    slidesToShow={6}
+                    slidesToShow={4}
                     slidesToScroll={1}
                     initialSlide={0}
                     responsive={[
                       {
                         breakpoint: 770,
                         settings: {
-                          slidesToShow: 4,
+                          slidesToShow: 2,
                           slidesToScroll: 1
                         }
                       },
                       {
                         breakpoint: 430,
                         settings: {
-                          slidesToShow: 2,
+                          slidesToShow: 1,
                           slidesToScroll: 1
                         }
                       }

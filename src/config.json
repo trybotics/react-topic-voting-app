@@ -1,6 +1,6 @@
 {
     "api": {
-        "root": "http://a19fc9260e96.ngrok.io"
+        "root": "http://localhost:8080"
     },
-    "rootURL": "http://a19fc9260e96.ngrok.io"
+    "rootURL": "http://localhost:8080"
 }

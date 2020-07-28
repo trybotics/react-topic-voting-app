@@ -79,7 +79,7 @@ function login(state = initialState, action) {
       });
 
     case SET_NEW_TOPICS:
-      return Object.assign({}, state, { newBlogs: action.blogs })
+      return Object.assign({}, state, { newTopics: action.topics })
 
     case SET_TOAST:
       return Object.assign({}, state, {

@@ -38,7 +38,7 @@ const styles = theme => ({
   formHeader: {
     textAlign: "center",
     fontSize: "20px",
-    backgroundColor: "#2196f3",
+    backgroundColor: "#009688",
     color: "#fff",
     padding: "15px 12px",
     textTransform: "uppercase"
@@ -156,32 +156,6 @@ class Topic extends React.Component {
             fullWidth
             disabled
           />
-          <center style={{ marginTop: "20px" }}>
-            <Button
-              className={classes.buttonOutlined}
-              variant="outlined"
-              style={{ color: "#777", fontWeight: "600" }}
-            >
-              Image &nbsp;&nbsp;
-              <ImageIcon />
-            </Button>
-            <Button
-              className={classes.buttonOutlined}
-              variant="outlined"
-              style={{ color: "#777", fontWeight: "600" }}
-            >
-              Video &nbsp;&nbsp;
-              <PlayCircleFilledIcon />
-            </Button>
-            <Button
-              className={classes.buttonOutlined}
-              variant="outlined"
-              style={{ color: "#777", fontWeight: "600" }}
-            >
-              Link &nbsp;&nbsp;
-              <LinkIcon />
-            </Button>
-          </center>
         </div>
         <Divider light />
         <div style={{ paddingBottom: "40px", paddingTop: "5px" }}>

@@ -24,7 +24,7 @@ const styles = theme => ({
   formHeader: {
     textAlign: "center",
     fontSize: "20px",
-    backgroundColor: "#2196f3",
+    backgroundColor: "#009688",
     color: "#fff",
     padding: "15px 12px",
     textTransform: "uppercase"
