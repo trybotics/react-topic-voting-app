@@ -45,7 +45,7 @@ let pages = {
   },
   ad: {
     type: `website`,
-    title: `Ad`,
+    title: `Topic`,
     description: `Post online Topic for voting. Get topic voting result.`,
     image: defaultImg,
     keywords: defaultKeywords,
@@ -134,26 +134,20 @@ async function getPageInitialData(request, response) {
   let page = { ...pages['home'], url: rootURL + url, store: JSON.parse(JSON.stringify(initialStore)) }
   page.jsonLD = getJsonLD({ pageType: 'home', ...page })
   let urls = url.split('/')
-  if (urls[1] == 'buy' && urls.length > 1) {
-    urls[1] = 'affiliate'
-    url = urls.join('/')
-  }
-  if (urls[1] == 'internship' && urls.length == 2) {
-    url = request.query.search ? apiRoot + '/api' + url + '?page=1&search=' + request.query.search : apiRoot + '/api' + url + '?page=1'
-  } else if (urls.length == 2) {
+  if (urls.length == 2) {
     url = request.query.search ? apiRoot + '/api' + url + '?limit=6&skip=0&search=' + request.query.search : apiRoot + '/api' + url + '?limit=6&skip=0'
   } else if (urls.length == 3) {
     url = apiRoot + '/api' + url
   }
   try {
-    if (urls.length == 2 && ['blog', 'affiliate', 'youtube', 'workshop', 'project', 'internship', 'ad'].includes(urls[1])) {
+    if (urls.length == 2 && ['topic'].includes(urls[1])) {
       let result = await axios.get(url)
       page.store[urls[1] + 'State'][urls[1] + 's'] = result.data
       page = { ...page, ...pages[urls[1]] }
       return page
-    } else if (urls.length >= 3 && ['blog', 'affiliate', 'youtube', 'project', 'internship', 'ad'].includes(urls[1])) {
+    } else if (urls.length >= 3 && ['topic'].includes(urls[1])) {
       let result = await axios.get(url)
-      let data = urls[1] == 'internship' ? result.data : result.data[0]
+      let data = urls[1] == result.data[0]
       if (data) {
         if (data.id == urls[2]) {
           page.store[urls[1] + 'State'][urls[1] + 's'] = [data]
