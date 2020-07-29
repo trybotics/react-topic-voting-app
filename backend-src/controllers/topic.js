@@ -11,7 +11,6 @@ module.exports = {
 			CurdFactory.list(Ad, req, res)
 		} else {
 			if (req.query.limit && req.query.skip && req.query.isHome) { //If got only skip&limit then
-				console.log("xbbkjbfkljbf")
 				let find = req.query.search ? { $or: [{ 'title': new RegExp(req.query.search, 'i') }, { 'description': new RegExp(req.query.search, 'i') }], isDeleted: false } : { isDeleted: false }
 				Topic.find(find, 'id title imageUrl description videoId siteLink author comments likes.userId likes.like likes.userId disLikes.disLike disLikes.userId shares createdAt', { skip: parseInt(req.query.skip), limit: (parseInt(req.query.limit) > 100) ? 100 : parseInt(req.query.limit), sort: { likes: -1 } }, function (err, topic) {
 					if (err) throw err;
