@@ -375,7 +375,21 @@ class BlogCardView extends React.Component {
             </div>
           )}
           <CardContent>
-            <Link style={{ all: "initial" }} to={path + this.props.data.id}>
+            {this.props.link ?
+              <Link style={{ all: "initial" }} to={path + this.props.data.id}>
+                <Typography
+                  style={{
+                    textAlign: "justify",
+                    fontWeight: "600",
+                    fontSize: "18px",
+                    fontFamily: '"Roboto", "Helvetica" ,"Arial" ,sans-serif'
+                  }}
+                  variant="title"
+                >
+                  {this.props.data.title}
+                </Typography>
+              </Link>
+              :
               <Typography
                 style={{
                   textAlign: "justify",
@@ -387,7 +401,7 @@ class BlogCardView extends React.Component {
               >
                 {this.props.data.title}
               </Typography>
-            </Link>
+            }
             <Typography
               style={{
                 textAlign: "justify",
@@ -435,12 +449,12 @@ class BlogCardView extends React.Component {
               )}
             </Typography>
           </CardContent>
-          {!this.props.noBottom&&
-          <BottomCardView
-            gridSet={this.props.gridSet}
-            data={this.props.data}
-            type={this.props.type}
-          />}
+          {!this.props.noBottom &&
+            <BottomCardView
+              gridSet={this.props.gridSet}
+              data={this.props.data}
+              type={this.props.type}
+            />}
         </Card>
         {(this.props.type == "topic") ?
           <TopicPost
@@ -448,7 +462,7 @@ class BlogCardView extends React.Component {
             open={this.state.showBlogForm}
             onClose={this.closeDialog}
             data={this.props.data}
-          />:''
+          /> : ''
         }
         <Dialog
           fullWidth={true}

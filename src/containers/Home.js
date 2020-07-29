@@ -1,9 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { withStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card'
 import Grid from '@material-ui/core/Grid'
-import Divider from '@material-ui/core/Divider'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import Link from 'react-router-dom/Link'
@@ -165,16 +163,7 @@ class Home extends React.Component {
     let topicCard = []
     for (let i in this.props.newTopics) {
       topicCard.push(
-        <Link style={{ all: 'initial' }} to={'topic/' + this.props.newTopics[i].id}>
-          {/* <Card style={{ marginLeft: 10, marginRight: 10, marginTop: 20, marginBottom: 20 }}>
-              {this.props.newTopics[i].imageUrl &&
-                <img width="100%" height="160px" src={this.props.newTopics[i].imageUrl} alt={this.props.newTopics[i].title} />
-              }
-              <Divider />
-              <Typography style={{ padding: "10px", fontSize: '15px', fontWeight: 'bold' }} align="center" variant="h6" noWrap>
-                {this.props.newTopics[i].title}
-              </Typography>
-            </Card> */}
+        <div style={{ all: 'initial' }}>
           <div style={{ marginLeft: 10, marginRight: 10, marginTop: 20, marginBottom: 20 }}>
             <TopicCardView
               location={this.props.location}
@@ -182,9 +171,10 @@ class Home extends React.Component {
               data={this.props.newTopics[i]}
               type="topic"
               noBottom={true}
+              link
             />
           </div>
-        </Link>
+        </div>
       )
     }
 

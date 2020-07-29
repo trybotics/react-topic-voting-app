@@ -17,7 +17,7 @@ module.exports = {
 					if (err) throw err;
 					res.json(topic)
 				}).populate('comments.userId', 'id name imageUrl').populate('author', 'id name imageUrl')
-			}else if (req.query.limit && req.query.skip && req.query.category && req.query.subCategory) { //If got all 4 parameters then
+			} else if (req.query.limit && req.query.skip && req.query.category && req.query.subCategory) { //If got all 4 parameters then
 				Topic.find({ category: req.query.category, subCategory: req.query.subCategory, isDeleted: false }, 'id title imageUrl description videoId siteLink author comments likes.userId likes.like likes.userId disLikes.disLike disLikes.userId shares createdAt', { skip: parseInt(req.query.skip), limit: (parseInt(req.query.limit) > 100) ? 100 : parseInt(req.query.limit), sort: { id: -1 } }, function (err, topic) {
 					if (err) throw err;
 					res.json(topic)
@@ -53,7 +53,15 @@ module.exports = {
 	},
 
 	read: function (req, res) {
-		CurdFactory.read(Topic, req, res)
+		let url = req.params.id.split('_')
+		if (url.length == 4) {
+			req.params.id = url[3]
+			console.log(url[3])
+		}
+		Topic.find(isNaN(req.params.id) ? { id: new RegExp(req.params.id, 'i'), isDeleted: false } : { id: req.params.id, isDeleted: false }, function (err, topic) {
+			if (err) throw err;
+			res.json(topic)
+		}).populate('comments.userId', 'id name imageUrl').populate('author', 'id name imageUrl')
 	},
 
 	create: function (req, res) {

@@ -24,9 +24,9 @@ import AccessibilityOutlinedIcon from "@material-ui/icons/AccessibilityOutlined"
 import KeyboardBackspaceIcon from "@material-ui/icons/KeyboardBackspace";
 import { withStyles } from "@material-ui/core/styles";
 
-import { 
-    getTopicData, 
-    getTopicDetails 
+import {
+  getTopicData,
+  getTopicDetails
 } from "../actions/Topic";
 
 var pageNo = 1;
@@ -75,7 +75,7 @@ class Topic extends React.Component {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
     if (!this.props.match.params.id) {
-      document.title = "Topic | Topic";
+      document.title = "Topic | Topic Vote";
     }
     if (this.props.topics.length == 0) {
       this.props.getTopicData(1, this.props.location.search, false);
@@ -175,16 +175,18 @@ class Topic extends React.Component {
     );
     for (var i in this.props.topics) {
       counter = counter + 1;
-      topics.push(
-        <TopicCardView
-          location={this.props.location}
-          key={"topic" + counter}
-          gridSet={this.gridSet}
-          data={this.props.topics[i]}
-          type="topic"
-          link
-        />
-      );
+      if (this.props.topics[i].title) {
+        topics.push(
+          <TopicCardView
+            location={this.props.location}
+            key={"topic" + counter}
+            gridSet={this.gridSet}
+            data={this.props.topics[i]}
+            type="topic"
+            link
+          />
+        );
+      }
     }
 
     let topic = null;
@@ -268,9 +270,7 @@ class Topic extends React.Component {
         initialLoad={false}
         pageStart={1}
         loadMore={page => {
-          if (page > Math.ceil(this.props.topics.length / 6)) {
-            this.handleLoadMore(page);
-          }
+          this.handleLoadMore(page);
         }}
         hasMore={this.props.topicHasMore}
         loader={
@@ -279,8 +279,8 @@ class Topic extends React.Component {
           </center>
         }
       >
-        <TopicPost 
-          open={this.state.showTopicPost} 
+        <TopicPost
+          open={this.state.showTopicPost}
           onClose={this.closeTopicPost}
         />
         <Login closeModel={this.closeModel} open={this.state.showLogin} />

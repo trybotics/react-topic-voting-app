@@ -2,5 +2,5 @@
     "api": {
         "root": "http://localhost:8080"
     },
-    "rootURL": "http://localhost:8080"
+    "rootURL": "http://localhost"
 }
