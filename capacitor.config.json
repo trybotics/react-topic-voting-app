@@ -1,0 +1,22 @@
+{
+  "appId": "com.topicvoting.app",
+  "appName": "Topic Voting",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "build",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "server": {
+    "androidScheme": "http",
+    "allowNavigation": []
+  },
+  "cordova": {},
+  "android": {
+    "allowMixedContent": true,
+    "webContentsDebuggingEnabled": true,
+    "captureInput": true
+  }
+}
