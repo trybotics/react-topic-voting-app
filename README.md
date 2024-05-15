@@ -1,13 +1,13 @@
-## React Topic Voting App
+# React Topic Voting App
 
 This repository contains the source code for a React-based topic voting application. It allows users to create, view, edit, and delete topics, as well as like, dislike, comment, and share them. The app also features search functionality, lazy loading, and supports multiple languages.
 
-### Demo Credentials
+## Demo Credentials
 
 - **Email:** user@gmail.com
 - **Password:** user@gmail.com
 
-### Installation
+## Installation
 
 To get started, follow these steps:
 
@@ -43,7 +43,7 @@ To get started, follow these steps:
     npm run serve
     ```
 
-### Technologies
+## Technologies
 
 - **Frontend:** React JS with Redux
 - **Backend:** Node.js with Express.js
@@ -56,7 +56,7 @@ To get started, follow these steps:
     - Metadata, keywords
     - Page Speed Optimization
 
-### Features
+## Features
 
 - Login
 - Sign Up
@@ -76,50 +76,51 @@ To get started, follow these steps:
 - Mobile responsive design
 - Language change feature
 
-### Source Code Management
+## Source Code Management
 
 This project is managed using Git and hosted on GitHub. You can find the source code [here](https://github.com/trybotics/react-topic-voting-app).
 
 Feel free to reach out if you have any questions or suggestions!
 
-### Some of the UI Screenshots
+## Some of the UI Screenshots
 
-#### Home 
+### Home 
 ![image](https://github.com/trybotics/react-topic-voting-app/assets/22857102/5b62600e-1228-4e25-8721-4a3bc7da0316)
 
-#### Signup Page
+### Signup Page
 ![image](https://github.com/trybotics/react-topic-voting-app/assets/22857102/4bfaa677-b0ae-453b-9b92-012da2d8007d)
 
-#### Login Page
+### Login Page
 ![image](https://github.com/trybotics/react-topic-voting-app/assets/22857102/ecba6033-9251-4be7-84e1-80616f66af9e)
 
-#### Home Page After Login
+### Home Page After Login
 ![image](https://github.com/trybotics/react-topic-voting-app/assets/22857102/4f41c535-d4fe-4c24-a33f-d9e9daeca955)
 
-#### Menu Drawer
+### Menu Drawer
 ![image](https://github.com/trybotics/react-topic-voting-app/assets/22857102/6ae618fe-98bc-4974-946d-75adc8a71576)
 
-#### Topic Listing Page
+### Topic Listing Page
+![image](https://github.com/trybotics/react-topic-voting-app/assets/22857102/cfdeb5cf-eaba-4e66-8155-ebc4e50e657c)
 
-#### Form for Topic Post
+### Form for Topic Post
 ![image](https://github.com/trybotics/react-topic-voting-app/assets/22857102/4ec5476a-3f8f-49dd-8a9a-51e1e94835bb)
 
-#### After the topic post, a new topic card will be created and a success message will come
+### After the topic post, a new topic card will be created and a success message will come
 ![image](https://github.com/trybotics/react-topic-voting-app/assets/22857102/232db277-8007-4e31-8a23-f925fa471c71)
 
-#### If you are the author of the topic then you get an edit and delete options and you can edit or delete your topic.
+### If you are the author of the topic then you get an edit and delete options and you can edit or delete your topic.
 ![image](https://github.com/trybotics/react-topic-voting-app/assets/22857102/e7daa00d-5a8f-4b2d-aad9-539c2abadb13)
 
-#### Topic edit form, will be prefilled. You can edit your topic and save it
+### Topic edit form, will be prefilled. You can edit your topic and save it
 ![image](https://github.com/trybotics/react-topic-voting-app/assets/22857102/7fa24153-ba93-49b0-8694-8756de7151ae)
 
-#### After the edit, you can see the topic is edited
+### After the edit, you can see the topic is edited
 ![image](https://github.com/trybotics/react-topic-voting-app/assets/22857102/1f704590-7b7a-43cd-a641-929b0302ff4a)
 
-#### Topic delete option
+### Topic delete option
 ![image](https://github.com/trybotics/react-topic-voting-app/assets/22857102/6b51309e-59d7-4dae-94a8-42a670fa7fce)
 
-#### After deletion, the topic will automatically be removed from the UI, and a deleted message will come
+### After deletion, the topic will automatically be removed from the UI, and a deleted message will come
 ![image](https://github.com/trybotics/react-topic-voting-app/assets/22857102/8aa3b5c7-9851-4246-8478-532a815bd315)
 
 ### Mobile UI Screenshots
