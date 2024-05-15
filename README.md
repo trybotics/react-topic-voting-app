@@ -119,42 +119,13 @@ Feel free to reach out if you have any questions or suggestions!
 #### Topic delete option
 ![image](https://github.com/trybotics/react-topic-voting-app/assets/22857102/6b51309e-59d7-4dae-94a8-42a670fa7fce)
 
-#### After delete, the topic will automatically be removed from the UI, and a deleted message will come
+#### After deletion, the topic will automatically be removed from the UI, and a deleted message will come
 ![image](https://github.com/trybotics/react-topic-voting-app/assets/22857102/8aa3b5c7-9851-4246-8478-532a815bd315)
 
 ### Mobile UI Screenshots
-![image](https://github.com/trybotics/react-topic-voting-app/assets/22857102/a17cc190-995c-4c8e-9424-0fe8fb71fc36)
-![image](https://github.com/trybotics/react-topic-voting-app/assets/22857102/2c485ebf-a3d4-465a-9624-799550a5d073)
-![image](https://github.com/trybotics/react-topic-voting-app/assets/22857102/e9a7b0ca-700a-4590-8a85-48d52f4b794d)
-![image](https://github.com/trybotics/react-topic-voting-app/assets/22857102/33d91cee-4e16-4b44-af2d-0b7a3961296a)
-![image](https://github.com/trybotics/react-topic-voting-app/assets/22857102/69946527-8b29-425a-8056-dc12cae0694b)
-![image](https://github.com/trybotics/react-topic-voting-app/assets/22857102/b92be99f-07ec-4178-87b8-eeb97b8c1097)
-![image](https://github.com/trybotics/react-topic-voting-app/assets/22857102/4cc9453e-a6f0-49d5-ad38-dfedfb17e368)
-![image](https://github.com/trybotics/react-topic-voting-app/assets/22857102/3e08d605-7593-4b05-ae17-bebfd5edb3fa)
-![image](https://github.com/trybotics/react-topic-voting-app/assets/22857102/f6f66f53-7f94-408c-be08-7937a24c4efc)
-![image](https://github.com/trybotics/react-topic-voting-app/assets/22857102/f066fae0-5b60-4e7f-b1cb-5ed7e70f4134)
-![image](https://github.com/trybotics/react-topic-voting-app/assets/22857102/a327002e-4af6-4d7c-bb22-63d08085f662)
-![image](https://github.com/trybotics/react-topic-voting-app/assets/22857102/95454b99-b2d8-4b66-a9e0-50e91faad18f)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![image](https://github.com/trybotics/react-topic-voting-app/assets/22857102/a17cc190-995c-4c8e-9424-0fe8fb71fc36) ![image](https://github.com/trybotics/react-topic-voting-app/assets/22857102/2c485ebf-a3d4-465a-9624-799550a5d073)
+![image](https://github.com/trybotics/react-topic-voting-app/assets/22857102/e9a7b0ca-700a-4590-8a85-48d52f4b794d) ![image](https://github.com/trybotics/react-topic-voting-app/assets/22857102/33d91cee-4e16-4b44-af2d-0b7a3961296a)
+![image](https://github.com/trybotics/react-topic-voting-app/assets/22857102/69946527-8b29-425a-8056-dc12cae0694b) ![image](https://github.com/trybotics/react-topic-voting-app/assets/22857102/b92be99f-07ec-4178-87b8-eeb97b8c1097)
+![image](https://github.com/trybotics/react-topic-voting-app/assets/22857102/4cc9453e-a6f0-49d5-ad38-dfedfb17e368) ![image](https://github.com/trybotics/react-topic-voting-app/assets/22857102/3e08d605-7593-4b05-ae17-bebfd5edb3fa)
+![image](https://github.com/trybotics/react-topic-voting-app/assets/22857102/f6f66f53-7f94-408c-be08-7937a24c4efc) ![image](https://github.com/trybotics/react-topic-voting-app/assets/22857102/f066fae0-5b60-4e7f-b1cb-5ed7e70f4134)
+![image](https://github.com/trybotics/react-topic-voting-app/assets/22857102/a327002e-4af6-4d7c-bb22-63d08085f662) ![image](https://github.com/trybotics/react-topic-voting-app/assets/22857102/95454b99-b2d8-4b66-a9e0-50e91faad18f)
